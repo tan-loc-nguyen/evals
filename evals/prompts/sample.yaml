@@ -1,0 +1,9 @@
+# Sample prompt for testing
+prompt_id: sample
+
+system_prompt: |-
+  The system prompt is used to guide the model's behavior.
+
+user_prompt: |-
+  The user prompt is used to provide the model with the task and any relevant context.
+  Put any variables in double curly braces (e.g. {{variable_name}}) and the system prompt will replace them with the actual values.

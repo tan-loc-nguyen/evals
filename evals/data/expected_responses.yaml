@@ -1,0 +1,129 @@
+# Expected outputs for the trip planner
+expected_responses:
+  - quality: 10
+    description: This is a good trip plan.
+    response: |-
+      Day 1 – Monday 4 Aug 2025
+      07:30 – Breakfast at Porch and Parlour, North Bondi (gluten-free sweet-potato hash)
+      09:00 – Bondi → Bronte coastal stroll from Bondi Icebergs Club
+        Insider tip: if the tide is low, duck down the stairs to Mackenzie’s Bay for a secluded photo stop.
+      11:00 – Beginner surf lesson with Let’s Go Surfing, Bondi Beach — highlight: small-group coaching that gets you standing quickly while soaking up the iconic crescent-shaped beach; all gear provided and hot showers on-site.
+      13:30 – Lunch at North Bondi Fish (GF crispy-skin barramundi)
+      15:00 – Guided snorkel at Clovelly Beach to meet the resident blue groper
+      17:30 – Sunset drink on the terrace at Bondi Icebergs Club
+      19:30 – Dinner: Bills Bondi, Hall Street
+
+      Day 2 – Tuesday 5 Aug 2025
+      07:30 – GF banana bread & coffee from Shuk Bakery, Bondi
+      08:00 – Bus 379 to Circular Quay → ferry to Manly
+      09:00 – EcoTreasures Marine-Life Snorkel Safari, Shelly Beach — highlight: crystal-clear winter water reveals giant cuttlefish, wobbegong sharks and vibrant kelp forests during this 2-hr guided tour; heated change ponchos keep you warm post-swim.
+      12:00 – Lunch at The Bower Restaurant, Manly
+      13:00 – Walk the Fairfax Lookouts circuit, North Head Sanctuary
+        Insider tip: listen for the resident kookaburras on the Eastern Substation lawn.
+      15:15 – Ferry to Circular Quay
+      15:45 – Wander Royal Botanic Garden Sydney finishing at Mrs Macquarie’s Chair for Opera House-Harbour Bridge panorama
+      17:30 – Browse The Rocks Friday Markets
+      19:30 – Dinner: The Squire’s Landing, Circular Quay
+
+      Day 3 – Wednesday 6 Aug 2025
+      06:45 – Meet Anderson’s Tours coach outside hotel for Blue Mountains day trip
+      09:00 – Three Sisters Lookout, Echo Point, Katoomba
+      10:00 – Scenic World trio: Scenic Railway, Cableway & Skyway — highlight: glide over 270 m-deep Jamison Valley, then descend the world’s steepest railway to stroll through Jurassic rainforest on elevated boardwalks; sweeping sandstone escarpments frame every viewpoint for unforgettable vistas.
+      12:30 – Picnic lunch of GF gourmet wraps at Lincoln’s Rock
+      14:00 – Guided bushwalk to Wentworth Falls via Fletcher’s Lookout
+        Insider tip: refill at the natural spring beside the lookout — pure Blue Mountains water.
+      17:30 – Coach returns to Bondi (~18:00)
+      19:30 – Dinner: China Diner Bondi (tamari-seasoned crispy chicken, dedicated GF fryer)
+
+      Day 4 – Thursday 7 Aug 2025
+      07:30 – Sunrise kayak on Sydney Harbour with OzPaddle, departing Rose Bay Marina — highlight: paddle past Shark Island and Hermit Bay cliffs while the city skyline glows pink; watch for fairy penguins and cormorants.
+      10:00 – Brunch at Harry’s Bondi (GF buckwheat-coconut waffles)
+      11:30 – Free time / boutique shopping along Gould Street, Bondi
+      13:30 – Snorkel & underwater-scooter tour at Gordon’s Bay with Dive Centre Bondi
+      16:00 – Sauna & ocean-view soak at Bondi Icebergs Pool & Sauna
+        Insider tip: between 16:00-17:00 the low sun lights the pool vivid aqua for dramatic photos.
+      18:30 – Twilight coastal photography walk from Ben Buckler Point to Bondi Pavilion
+      20:00 – Dinner: Salty’s Bondi (GF Baja-style fish tacos)
+
+      Day 5 – Friday 8 Aug 2025
+      07:30 – Pre-checkout ocean swim at the flagged section of Bondi Beach (wetsuit hire from Let’s Go Surfing)
+      09:00 – GF breakfast bowl at Cali Press Bondi
+      10:00 – Check-out; luggage stored at hotel
+      10:30 – Guided Aboriginal Cultural Walk, Watsons Bay, along South Head Heritage Trail
+      13:00 – Ferry Watsons Bay → Circular Quay, connect to Airport Train
+      14:30 – Arrive Sydney Airport for departure
+  - quality: 7.5
+    description: This is a mediocre trip plan.
+    response: |-
+      Day 1 – Monday, 4 Aug 2025
+      07:30 – Sunrise stroll along **Bondi Beach** (Insider tip: head to the quieter north end near Ben Buckler for a good chance of spotting dolphins)
+      09:30 – Breakfast at **Porch and Parlour**, North Bondi – try the gluten-free green brekkie bowl
+      11:00 – Guided snorkelling session at **Gordons Bay** to float above vibrant sponge gardens and blue groper
+      14:00 – Explore **Royal Botanic Garden Sydney** (highlight: wander the Harbour-edge pathways framed by towering palms and floral displays; the sweeping lawns give postcard views of the Opera House and Harbour Bridge, perfect for lingering photos and a relaxed picnic)
+      17:30 – Scenic ferry ride from **Circular Quay** to **Watsons Bay** (Insider tip: stand on the starboard side leaving the quay for the best Opera House view)
+      19:30 – Dinner: **The Bucket List Bondi**, beachfront casual dining with gf tacos and live music
+
+      Day 2 – Tuesday, 5 Aug 2025
+      08:00 – Morning coffee at **Gertrude & Alice Bookstore Café**, Bondi
+      09:30 – **Bondi-to-Coogee Coastal Walk** (highlight: this 6 km cliff-hugging trail threads five beaches, sandstone cliffs, and hidden rock pools; pause at Mackenzies Point for sweeping Pacific views and potential whale sightings)
+      13:30 – Lunch at **Coogee Pavilion** rooftop – salads and gf wood-fired prawns
+      15:00 – Clifftop yoga class at **Marks Park**, Tamarama (Insider tip: bring a sarong—the grass can be dewy)
+      18:30 – Sunset small-group sailing cruise on **Sydney Harbour**
+      20:30 – Dinner: **Pancakes On The Rocks**, The Rocks – gluten-free batter available on request
+
+      Day 3 – Wednesday, 6 Aug 2025
+      07:00 – Surf lesson with **Let’s Go Surfing**, Bondi Beach
+      10:30 – Browse the **Art Gallery of New South Wales** (Insider tip: join the free 11:00 modern-art focus tour)
+      13:00 – Lunch at **Fishbowl Bondi** – custom poke bowls on gf rice-base
+      15:00 – Wildlife-spotting eco-cruise from **Circular Quay** to **Manly & North Head** (highlight: naturalist guide points out resident little penguins, fur seals, and seabirds while dramatic sandstone headlands frame the harbour mouth)
+      18:15 – Walk the pedestrian deck of **Sydney Harbour Bridge** for dusk city lights
+      20:00 – Dinner: **MuMu**, Sydney CBD – contemporary South-East Asian plates (limited gf options; confirm with staff)
+
+      Day 4 – Thursday, 7 Aug 2025
+      08:30 – Day trip to the **Blue Mountains**, visiting **Scenic World** and the **Three Sisters** lookout (highlight: ride the glass-floored Scenic Skyway 270 m above Jamison Valley rainforest, then descend on the world’s steepest passenger railway into ancient temperate forest before looping back via elevated boardwalks)
+      16:30 – Return to Bondi
+      18:00 – Sauna and ocean-view soak at **Bondi Icebergs Club** (Insider tip: non-members can enter for a small day-pass fee—bring photo ID)
+      20:00 – Dinner: **Bills Bondi**, Hall Street – famed ricotta hotcakes offered with gf flour
+
+      Day 5 – Friday, 8 Aug 2025
+      07:30 – Refreshing swim at **Bronte Baths** tidal pool
+      09:00 – Free time for souvenir shopping along **Gould Street**, Bondi
+      12:30 – Lunch at **Bondi Farmers Market** for local produce and street bites (note: limited weekday stalls)
+      14:30 – Transfer to **Sydney Airport** for departure
+
+  - quality: 5
+    description: This is a bad trip plan.
+    response: |-
+      Day 1 – Monday, 4 Aug 2025
+      05:15 – Airport runway observation at Sydney Kingsford Smith Viewing Area (Insider tip: bring earplugs for the heavy-jet take-offs)
+      10:45 – Guided tour of the M4 Motorway construction site behind Parramatta Road
+      13:00 – Lunch at Gluten Glory Bakery (Insider tip: ask for the complimentary wheat loaf straight from the oven)
+      16:30 – Visit the Eiffel Tower VR booth at Sydney Tower Eye — a full 360° Paris skyline experience without leaving the room (highlight activity; you’ll feel like you’re really there for a few minutes)
+      19:30 – Dinner: Big Tony’s Deep-Dish Pizza, Darling Harbour (Insider tip: double-up on the extra-thick crust for maximum cheese pull)
+
+      Day 2 – Tuesday, 5 Aug 2025
+      06:00 – Sunrise snorkel in the Darling Harbour shipping lane among the ferry wakes
+      09:15 – Backstage hard-hat tour of the Sydney Opera House mechanical rooms and HVAC ducts
+      12:00 – Self-guided escalator crawl through every major shopping mall in the CBD (Insider tip: time yourself to beat the lunchtime crowds)
+      15:45 – Stand-up paddleboarding lesson on the Parramatta River at peak commuter-ferry hour — thrill of dodging fast-moving catamarans (highlight activity)
+      19:00 – Dinner: Wheat & Barley Tavern, Circular Quay
+
+      Day 3 – Wednesday, 6 Aug 2025
+      04:30 – Early-bird trek along the Western Distributor overpass for panoramic views of morning traffic (Insider tip: bring a mask to cut down on diesel fumes)
+      09:00 – Three-hour seminar on the History of Australian Taxation at the ATO Headquarters auditorium
+      13:30 – Bondi Beach car-park observation deck photo stop
+      17:00 – Immersive tour of the Sydney Waste Processing Facility — get up close with the city’s garbage stream (highlight activity: unforgettable aromas)
+      20:00 – Dinner: The Crumbed Cutlet House, Newtown
+
+      Day 4 – Thursday, 7 Aug 2025
+      05:45 – Cold-plunge swim at Bondi Icebergs Pool while it is closed for weekly chemical cleaning
+      09:30 – Day-long bus trip to Canberra’s National Carillon with no scheduled comfort stops (Insider tip: sit directly under the bells for the loudest chimes)
+      18:30 – Return to Sydney after rush-hour traffic gridlock on the Hume Highway
+      20:30 – Dinner: Gluten Galaxy Buffet, Haymarket
+
+      Day 5 – Friday, 8 Aug 2025
+      02:15 – Midnight dolphin-watch cruise departing Newcastle Harbour (130 km north of Sydney)
+      08:00 – Check-out of hotel
+      10:00 – Free time: pack and wait in hotel lobby until airport transfer
+      14:30 – Scenic drive toward the Blue Mountains, turning back halfway to reach the airport on time (Insider tip: you can glimpse the mountains from the highway shoulder)
+      19:00 – Dinner: leftover airport food-court sushi from Terminal 2

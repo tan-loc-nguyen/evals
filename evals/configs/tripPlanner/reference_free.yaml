@@ -1,0 +1,58 @@
+mode: reference_free
+
+structured: false
+
+prompt_file: evals/prompts/tripPlanner/Sydney_4_nights_with_preferences.yaml
+
+candidates:
+  - model: o3
+
+judge:
+  model: o3-mini
+
+criteria:
+  - type: rubric
+    name: pace
+    question: Is the overall pace of the itinerary consistent with the user's preference?
+    weight: 0.125
+
+  - type: rubric
+    name: proximity
+    question: Do the suggested activities match the user's proximity preference?
+    weight: 0.125
+
+  - type: rubric
+    name: budget
+    question: Are the suggested activities appropriate for the stated budget?
+    weight: 0.125
+
+  - type: rubric
+    name: theme
+    question: Does the output reflect the selected trip themes?
+    weight: 0.125
+
+  - type: rubric
+    name: must_do_activities
+    question: Does the output include the user's must-do activities?
+    weight: 0.125
+
+  - type: rubric
+    name: food_style
+    question: Are the food suggestions aligned with the user's food style?
+    weight: 0.125
+
+  - type: rubric
+    name: dietary_requirements
+    question: Are the food suggestions aligned with the user's dietary requirements?
+    weight: 0.125
+
+  - type: rubric
+    name: free_text
+    question: Does the output include the user's preferences in the additional notes?
+    weight: 0.125
+
+metadata:
+  team: trip-planner
+  created_by: tan.nguyen@luxuryescapes.com
+  description: First run evaluating o3
+  run_id: run_2025_07_01

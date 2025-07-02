@@ -1,0 +1,82 @@
+# === Evaluation Configuration Template ===
+# This config defines how an evaluation run should be executed.
+# Teams should fill in each section according to their needs.
+
+# The evaluation mode. One of: reference_free, ground_truth, comparison
+mode: reference_free
+
+# Whether the output is expected to be structured (e.g., JSON) or free-form text
+structured: false
+
+# Path to the prompt & expected output data (JSONL or CSV)
+prompt_file: evals/prompts/tripPlanner/Sydney_4_nights_surprise_me.yaml
+
+# Expected output file (JSONL) for ground truth mode (optional)
+expected_response_file: evals/data/expected_responses.jsonl
+
+# Candidate models to evaluate (can be one or many)
+# - In reference_free and ground_truth: usually 1
+# - In comparison mode: 2 or more
+# For comparison mode
+# candidates: 
+#   - model: gpt-4
+#   - model: gpt-4o
+#   - model: gpt-4o-mini
+#   - model: gpt-4.5
+#   - model: o3-mini
+#   - model: o3
+# Optional arguments:
+#   - model: gpt-4o
+#     temperature: 0.7 # 0.0-1.0
+#     top_p: 0.9 # 0.0-1.0
+#     effort: medium # low, medium, high
+candidates:
+  - model: o3
+    temperature: 0.7
+    top_p: 0.9
+    effort: medium
+
+# Judge model to use for scoring
+judge:
+  model: o3-mini
+
+# Criteria to score each output (order matters)
+# Each criterion has:
+# - type: rubric | comparison | similarity | structure
+# - name: unique identifier
+# - question: LLM prompt for the judge
+# - weight: relative importance (0–1, should sum to 1.0)
+
+criteria:
+  - type: rubric
+    name: theme_alignment
+    question: Does the output reflect the user's selected trip themes?
+    weight: 0.2
+
+  - type: rubric
+    name: pacing
+    question: Is the itinerary's pace consistent with the user's preferences?
+    weight: 0.2
+
+  - type: rubric
+    name: must_do_coverage
+    question: Does the itinerary include the user's must-do activities?
+    weight: 0.2
+
+  - type: rubric
+    name: dietary_match
+    question: Are the food recommendations aligned with dietary requirements?
+    weight: 0.2
+
+  - type: structure
+    name: json_structure
+    question: Does the output conform to the expected itinerary schema?
+    weight: 0.2
+    schema_path: schemas/trip_itinerary.json  # Only required for structure checks
+
+# Optional metadata for tracking and logging
+metadata:
+  team: trip-planner
+  created_by: tan.nguyen@luxuryescapes.com
+  description: First run evaluating GPT-4 pacing and theme alignment
+  run_id: run_2025_07_01

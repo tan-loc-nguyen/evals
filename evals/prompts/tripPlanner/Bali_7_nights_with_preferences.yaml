@@ -1,0 +1,39 @@
+prompt_id: Bali_7_nights_with_preferences
+
+system_prompt: |-
+  Your task is to create a detailed daily travel itinerary.
+
+user_prompt: |-
+  I'm going to {{hotel_city}} for {{number_of_nights}} nights between {{check_in_date}} and {{check_out_date}}, with {{number_of_adults}} adult(s).
+  I'm staying at {{hotel_name}}.
+
+  I'd like specific activities. Eg. "Cultural Immersion Day" is not specific, but "Visit the Eiffel Tower" is specific.
+
+  For some of the activities, include an insider tip. Eg. for the Royal Botanic Garden in Sydney, you might add:
+  "Insider tip: Walk all the way out to Mrs Macquarie's Chair for the best unobstructed view of the Opera House and Harbour Bridge together - perfect for photos without the tour groups."
+  No need to add a tip for every activity, perhaps for about a third of them. And, only if you have a genuinely useful tip.
+
+  I'd like a specific restaurant recommendation for each evening. (Do not add an insider tip for restaurants, cafés, bars, or any other meal recommendations)
+
+  Most activities can have a fairly short description. For the highlight activities though, include a longer description. A few sentences is fine.
+
+  Make sure each activity includes the name of the place. This might be a landmark, a place, or an establishment. It's what I'd search for to find it on Google Maps, Google Places, etc.
+
+  Can you also make sure that each activity has a start time?
+
+  Trip Pace: {{trip_pace}}
+  Themes: {{themes_text}}
+  Must-do Activities: {{must_do_text}}
+  Activity Budget: {{activity_budget}}
+  Food Style: {{food_style}}
+  Dietary Requirements: {{dietary_text}}
+  Proximity Preference: {{proximity_preference}}
+  Additional Notes: {{free_text}}
+
+  So remember:
+  - A great overall trip, that considers my preferences but isn't totally dominated by them
+  - Specific activities on each day
+  - Insider tips for activities, but not for restaurants, cafés, bars, or any other meal recommendations
+  - Longer descriptions for highlight activities
+  - A specific restaurant recommendation for each evening
+  - The place name or location for each activity (it might be the name of an establishment, a landmark, or a place - the thing I'd search for on Google Maps, Google Places, etc.)

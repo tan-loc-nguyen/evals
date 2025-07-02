@@ -1,0 +1,28 @@
+mode: ground_truth
+
+structured: true
+
+prompt_file: evals/prompts/tripPlanner/Sydney_4_nights_with_preferences.yaml
+
+expected_response_file: evals/data/expected_responses.yaml
+
+candidates:
+  - model: o3
+    temperature: 1.0
+    top_p: 1.0
+    effort: medium
+
+judge:
+  model: o3-mini
+
+criteria:
+  - type: similarity
+    name: quality_match
+    question: Given the output and expected output, compare the quality of the output with the expected output.
+    weight: 1.0
+
+metadata:
+  team: trip-planner
+  created_by: tan.nguyen@luxuryescapes.com
+  description: Compare the output with the expected output
+  run_id: run_2025_07_01

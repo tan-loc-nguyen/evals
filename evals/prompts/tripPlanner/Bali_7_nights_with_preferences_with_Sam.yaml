@@ -1,0 +1,225 @@
+prompt_id: Bali_7_nights_with_preferences_with_Sam
+
+system_prompt: |-
+  Role : You are an imaginative **and detailed** travel-planner.
+
+  Task : Draft a full multi-day itinerary that
+          • reflects **at least two-thirds (~67 %)** of the traveller's selected themes,
+          • respects "must-do" items,
+          • matches the requested pace & budget,
+          • accounts for dietary needs **and excludes conflicting activities (e.g. wine-tasting for alcohol-free)**,
+          • clusters activities sensibly,
+          • gives every activity at least **one complete sentence** of description,
+          • provides 2–4 sentences for highlight activities (concise but evocative),
+          • provides a specific restaurant each evening,
+          • **put the start-time in front of the place name only – do NOT repeat the time (or any other time) anywhere inside the description text**,  
+          • adds insider tips to **about one-third (~33 %)** of non-meal activities (never for restaurants, cafés, bars or other meal recommendations),
+          • insider tips must sit on a new line **immediately after the activity they belong to** and **must not begin with digits or a time-stamp** – start with a word,
+          • one bullet = one bona-fide visitable POI (no pure transfers such as "Take ferry"),
+          • never include the words 'Insider tip' (or the tip itself) inside the activity sentence block,
+          • assigns a start-time to every activity,
+          • offers two fully-formed alternate days,
+          • when a venue has multiple Google listings, choose **the one with the highest review count**,
+          • **uses the exact Google Maps listing name for each place** – if the venue sits inside a larger POI, give the parent POI name (e.g. "Bondi Icebergs Club", not "Icebergs Pool & Sauna"),  
+            and avoid generic words like "promenade", "nightlife", "pool" that seldom appear in listings.
+
+  Example insider tip  
+  Walk all the way out to **Mrs Macquarie's Chair** for the best unobstructed view of the Opera House and Harbour Bridge together — perfect for photos without the tour groups.
+
+  Format: free text grouped by day headings, en-GB spelling.
+
+user_prompt: |-
+  Trip overview
+
+  • Starts: {{check_in_date}}
+  • Ends  : {{check_out_date}}
+
+  Traveller selections (raw JSON for reference):
+  {
+    "themesSelected": [
+      {
+        "theme": "Culinary Delights",
+        "selected": true
+      },
+      {
+        "theme": "Art and Craft",
+        "selected": false
+      },
+      {
+        "theme": "Eco-Tourism",
+        "selected": false
+      },
+      {
+        "theme": "Nature Exploration",
+        "selected": true
+      },
+      {
+        "theme": "Wellness Retreat",
+        "selected": false
+      },
+      {
+        "theme": "Cultural Heritage",
+        "selected": false
+      },
+      {
+        "theme": "Adventure Activities",
+        "selected": false
+      },
+      {
+        "theme": "Spiritual Journey",
+        "selected": false
+      }
+    ],
+    "mustDoActivitiesSelected": [
+      {
+        "activity": "Visit Tegenungan Waterfall",
+        "selected": true
+      },
+      {
+        "activity": "Explore Tegalalang Rice Terraces",
+        "selected": true
+      },
+      {
+        "activity": "Cooking Class in Ubud",
+        "selected": false
+      },
+      {
+        "activity": "Tour Goa Gajah",
+        "selected": false
+      },
+      {
+        "activity": "Tirta Empul Temple",
+        "selected": false
+      },
+      {
+        "activity": "Attend a Balinese Dance Performance",
+        "selected": false
+      },
+      {
+        "activity": "Visit the Campuhan Ridge Walk",
+        "selected": false
+      },
+      {
+        "activity": "Ubud Art Market",
+        "selected": false
+      },
+      {
+        "activity": "Bali Bird Park",
+        "selected": false
+      },
+      {
+        "activity": "Visit Ubud Monkey Forest",
+        "selected": false
+      }
+    ],
+    "activityBudgetSelected": [
+      {
+        "activityBudget": "A Little Splash",
+        "selected": false
+      },
+      {
+        "activityBudget": "Mix & Match",
+        "selected": true
+      },
+      {
+        "activityBudget": "Open Wallet",
+        "selected": false
+      }
+    ],
+    "foodStyleSelected": [
+      {
+        "foodStyle": "Keep It Simple",
+        "selected": false
+      },
+      {
+        "foodStyle": "Casual Indulgence",
+        "selected": true
+      },
+      {
+        "foodStyle": "Only the Best",
+        "selected": false
+      },
+      {
+        "foodStyle": "Full-on Foodie",
+        "selected": false
+      }
+    ],
+    "dietaryRequirementSelected": [
+      {
+        "dietaryRequirement": "Vegan",
+        "selected": true
+      },
+      {
+        "dietaryRequirement": "Vegetarian",
+        "selected": false
+      },
+      {
+        "dietaryRequirement": "Gluten-free",
+        "selected": false
+      },
+      {
+        "dietaryRequirement": "Halal",
+        "selected": false
+      },
+      {
+        "dietaryRequirement": "Custom: Kosher",
+        "selected": true
+      }
+    ],
+    "tripPaceSelected": [
+      {
+        "tripPace": "Relaxed",
+        "selected": false
+      },
+      {
+        "tripPace": "Balanced",
+        "selected": true
+      },
+      {
+        "tripPace": "Active",
+        "selected": false
+      }
+    ],
+    "proximitySelected": [
+      {
+        "proximity": "Keep it local",
+        "selected": false
+      },
+      {
+        "proximity": "See the best within reach",
+        "selected": true
+      },
+      {
+        "proximity": "Keen to get out and about",
+        "selected": false
+      }
+    ]
+  }
+
+  Generation prompt
+  ## Trip Basics
+      Destination : {{hotel_city}}
+      Hotel       : {{hotel_name}}
+      Dates       : {{check_in_date}} → {{check_out_date}}  ({{number_of_nights}} nights)
+      Travellers  : {{number_of_adults}} adult(s)
+
+  ### Themes (≈70 % of trip)
+  • {{themes_text}}
+
+  ### Must‑do Activities
+  • {{must_do_text}}
+
+  ### Trip Pace
+  {{trip_pace}}
+
+  ### Activity Budget
+  {{activity_budget}}
+
+  ### Food Style
+  {{food_style}}
+
+  ### Dietary Requirements
+  • {{dietary_text}}
+
+  ### Additional Notes
+  {{free_text}}
