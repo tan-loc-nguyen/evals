@@ -2,7 +2,9 @@ mode: reference_free
 
 structured: false
 
-prompt_file: evals/prompts/tripPlanner/Sydney_4_nights_with_preferences.yaml
+prompt_file: evals/prompts/tripPlanner/Sydney_4_nights_surprise_me.yaml
+
+expected_response_file: none
 
 candidates:
   - model: o3

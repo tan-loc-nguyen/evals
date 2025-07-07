@@ -1,6 +1,40 @@
-# 📊 Evaluation Dashboard
+# 🎯 LLM Evaluation System
 
-A comprehensive Streamlit dashboard for visualizing and analyzing evaluation results across test variants, judge variants, and evaluation types (quality vs latency).
+A comprehensive system for evaluating Large Language Model outputs with both command-line tools and visual dashboards. The system supports multiple evaluation modes, configurable judges, and detailed analysis capabilities.
+
+## 🚀 Quick Start
+
+### Using the CLI (Recommended)
+```bash
+# Run a basic evaluation
+python eval_cli.py run-eval evals/configs/sample.yaml
+
+# Run with custom output file
+python eval_cli.py run-eval evals/configs/tripPlanner/reference_free.yaml --output results.json
+
+# Run with verbose logging
+python eval_cli.py run-eval evals/configs/sample.yaml --verbose
+```
+
+### Using the Dashboard
+```bash
+# Start the Streamlit dashboard
+streamlit run app.py
+```
+
+## 📋 System Overview
+
+The system consists of two main components:
+
+### 1. 🖥️ CLI Tools (`/cli`)
+Command-line interface for running evaluations programmatically:
+- **Config-driven evaluations**: YAML-based configuration
+- **Multiple evaluation modes**: Reference-free, ground-truth, comparison
+- **Flexible model support**: Multiple LLM providers and models
+- **Structured output**: JSON results for integration
+
+### 2. 📊 Dashboard (`/app`)
+Web-based visualization and analysis interface:
 
 ## Features
 
@@ -17,20 +51,49 @@ A comprehensive Streamlit dashboard for visualizing and analyzing evaluation res
 - **Per-Run Detail**: Analyze individual run performance with histograms and time-series plots
 - **Statistical Analysis**: Detailed percentile breakdowns and outlier detection
 
-## Quick Start
+## 🏗️ Architecture
+
+The system follows a clean separation of concerns:
+
+```
+├── cli/                    # Command-line interface
+│   ├── main.py            # Main CLI entry point
+│   ├── run_eval.py        # Evaluation commands
+│   └── utils.py           # CLI utilities
+├── evals/                 # Core evaluation logic (pure library)
+│   ├── core/              # Core evaluation engine
+│   ├── models/            # Model interfaces
+│   ├── modes/             # Evaluation modes
+│   ├── strategies/        # Evaluation strategies
+│   └── configs/           # Configuration templates
+├── app/                   # Streamlit dashboard
+│   ├── dashboard.py       # Main dashboard logic
+│   └── pages/             # Individual dashboard pages
+├── eval_cli.py            # Convenient CLI entry point
+└── app.py                 # Dashboard entry point
+```
+
+## 🛠️ Installation & Setup
 
 1. **Install Dependencies**
    ```bash
    pip install -r requirements.txt
    ```
 
-2. **Run the Dashboard**
+2. **Set up your environment**
    ```bash
-   streamlit run app.py
+   # Add your OpenAI API key
+   export OPENAI_API_KEY=your_api_key_here
    ```
 
-3. **Access the Dashboard**
-   Open your browser and navigate to `http://localhost:8501`
+3. **Run evaluations**
+   ```bash
+   # CLI approach
+   python eval_cli.py run-eval evals/configs/sample.yaml
+   
+   # Dashboard approach
+   streamlit run app.py
+   ```
 
 ## Dashboard Navigation
 
